@@ -216,6 +216,11 @@ body {
     margin-bottom: 10px;
 }
 
+.post-preview h2 a {
+    color: inherit; /* Match the text color */
+    text-decoration: none; /* No underline */
+}
+
 .post-preview .text-muted {
     color: #4A4A4A; /* Dark grey for date */
     font-size: 0.9rem;
