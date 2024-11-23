@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einpost - Home</title>
+    <link href="public/bootstrap.min.css" rel="stylesheet">
+    <link href="public/bsicons/font.min.css" rel="stylesheet">
+    <link href="public/site.min.css" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="public/einpost-chobak-318h.png" alt="Einpost Logo">
+            <div class="brand-text ms-2">
+                <span class="navbar-title">Einpost</span><br>
+                <span class="navbar-tagline">Listen, Laugh, and Live</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item">
+                    <a class="nav-link chobak-corner" href="#" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                        Chobak's Corner <i class="bi bi-arrow-bar-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="text-center hero-section-header">
+            <img src="public/einpost-chobak-318h.png" alt="Einpost Logo" class="rounded-circle">
+            <h1 class="mt-2">Listen, Laugh, and Live</h1>
+            <p class="lead">A travel journal by Jaret Pfluger</p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content Section: Blog Previews -->
+<section id="posts" class="container my-5">
+    <!-- Blog Post Previews -->
+    <div class="post-preview">
+        <h2>Piglove</h2>
+        <p class="text-muted">November 23, 2024</p>
+        <p>The leaves have fallen, and November has settled in like an old friend who doesn’t overstay their welcome. Here I am, smack in the heart of the Midwest...</p>
+        <a href="post.html?post=/posts/2024/11/23/piglove/piglove.html" class="text-decoration-none">Read More</a>
+    </div>
+<!--    &lt;!&ndash; Link to More Posts &ndash;&gt;-->
+<!--    <div class="text-center mt-4">-->
+<!--        <a href="posts.html" class="btn btn-outline-dark">More Posts</a>-->
+<!--    </div>-->
+</section>
+
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebarLabel">Chobak's Corner</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" data-loaded="false">
+        <!-- Placeholder content -->
+        <p>
+            Hang tight! We're fetching the latest from Chobak's Corner.<br>
+            If this takes too long, try refreshing the page or come back later.
+        </p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-text">
+            © 2024 Aberlorn, Ltd. |
+            <a href="/">Einpost</a> |
+            <a href="about.html">About</a> |
+            <a href="legalese.html">Legalese</a>
+        </p>
+    </div>
+</footer>
+
+<script src="public/bootstrap.bundle.min.js"></script>
+<script src="public/site.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link href="public/bootstrap.min.css" rel="stylesheet">
+    <link href="public/bsicons/font.min.css" rel="stylesheet">
+    <link href="public/site.min.css" rel="stylesheet">
+    <style>
+        .post-section .post-section-header img {
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="/">
+            <img src="public/einpost-chobak-318h.png" alt="Einpost Logo">
+            <div class="brand-text ms-2">
+                <span class="navbar-title">Einpost</span><br>
+                <span class="navbar-tagline">Listen, Laugh, and Live</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item">
+                    <a class="nav-link chobak-corner" href="#" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                        Chobak's Corner <i class="bi bi-arrow-bar-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="idPost" class="d-none">
+    <!-- Loaded blog content will appear here -->
+</div>
+
+<div id="idPostNotLoaded" class="d-block">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="text-center hero-section-header">
+                <h1 class="mt-2">Loading Post...</h1>
+                <p class="lead">Just a moment, we're fetching the content for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="container my-5">
+        <div class="post-preview">
+            <p>If the post doesn’t load automatically, here’s what you can try:</p>
+            <ul class="" style="max-width: 600px;">
+                <li>Refresh the page to reload the content.</li>
+                <li>Check your internet connection to ensure you're online.</li>
+                <li>Still having trouble? Visit <a href="/">home</a> to explore other posts.</li>
+            </ul>
+            <p class="mt-3">We’re sorry for the inconvenience and appreciate your patience!</p>
+        </div>
+    </section>
+</div>
+
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sidebarLabel">Chobak's Corner</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" data-loaded="false">
+        <!-- Placeholder content -->
+        <p>
+            Hang tight! We're fetching the latest from Chobak's Corner.<br>
+            If this takes too long, try refreshing the page or come back later.
+        </p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p class="footer-text">
+            © 2024 Aberlorn, Ltd. |
+            <a href="/">Einpost</a> |
+            <a href="about.html">About</a> |
+            <a href="legalese.html">Legalese</a>
+        </p>
+    </div>
+</footer>
+
+<script src="public/bootstrap.bundle.min.js"></script>
+<script src="public/site.js"></script>
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const postPath = urlParams.get("post");
+
+        // Get references to the sections
+        const postSection = document.getElementById("idPost");
+        const notLoadedSection = document.getElementById("idPostNotLoaded");
+
+        if (postPath) {
+            fetch(postPath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load post: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    // Load content into idPost and toggle visibility
+                    postSection.innerHTML = html;
+                    postSection.classList.remove("d-none");
+                    postSection.classList.add("d-block");
+
+                    notLoadedSection.classList.remove("d-block");
+                    notLoadedSection.classList.add("d-none");
+                })
+                .catch(error => {
+                    console.error("Error loading post:", error);
+
+                    // Show the notLoadedSection
+                    notLoadedSection.classList.remove("d-none");
+                    notLoadedSection.classList.add("d-block");
+
+                    postSection.classList.remove("d-block");
+                    postSection.classList.add("d-none");
+                });
+        } else {
+            console.error("No post specified in the URL.");
+
+            // Show the notLoadedSection
+            notLoadedSection.classList.remove("d-none");
+            notLoadedSection.classList.add("d-block");
+
+            postSection.classList.remove("d-block");
+            postSection.classList.add("d-none");
+        }
+    });
+</script>
+</body>
+</html>
+
+

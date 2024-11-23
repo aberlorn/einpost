@@ -1,0 +1,407 @@
+/* Body Styling */
+body {
+    font-family: Georgia, serif;
+    background-color: #D9C7B8; /* Light beige */
+    color: #4A4A4A; /* Dark grey text */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #1A2A3A; /* Deep blue */
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+/* Logo styling */
+.navbar-brand img {
+    height: 65px;
+    /*border-radius: 50%;*/
+    /*background-color: #ece0da;*/
+}
+/* Styling for title and tagline */
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+.navbar-title {
+    font-size: 1.25rem;
+    color: #FDF8F2; /* Light cream */
+    font-weight: bold;
+}
+.navbar-tagline {
+    font-size: 0.85rem;
+    color: #FDF8F2;
+    font-style: italic;
+    opacity: 0.85;
+}
+@media (max-width: 576px) {
+    .navbar-title {
+        font-size: 1rem;
+    }
+    .navbar-tagline {
+        font-size: 0.75rem;
+        opacity: 0.75;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+    background-color: #FDF8F2; /* Light cream background */
+    border-bottom: 2px solid #ece0da; /* Subtle border */
+}
+.hero-section h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #A4573D; /* Rust color */
+}
+.hero-section .hero-section-header img {
+    background-color: #ece0da;
+    max-width: 175px;
+    box-shadow: 4px 8px #575555;
+}
+/* Content Section */
+.content-section {
+    padding: 60px 20px;
+}
+.content-section .text-center {
+    text-align: center;
+}
+.content-section img {
+    max-width: 150px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+/* Offcanvas Sidebar */
+.offcanvas.offcanvas-end {
+    width: 300px;
+    background-color: #FDF8F2; /* Light cream */
+    color: #4A4A4A; /* Dark grey */
+    border-left: 1px solid #ece0da;
+}
+.offcanvas .offcanvas-header {
+    background-color: #1A2A3A; /* Deep blue */
+    color: #FDF8F2; /* Light cream */
+    padding: 15px;
+}
+.offcanvas .offcanvas-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+}
+.offcanvas .offcanvas-body h6 {
+    color: #A4573D; /* Rust for headings */
+    border-bottom: 1px solid #ece0da;
+}
+.offcanvas .offcanvas-body p,
+.offcanvas .offcanvas-body ul {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+}
+.offcanvas .offcanvas-body a {
+    color: #A4573D;
+    transition: color 0.3s;
+}
+.offcanvas .offcanvas-body a:hover {
+    color: #8C4A36;
+}
+
+/* Chobak's Corner Button */
+.chobak-corner {
+    color: #fb9602;
+    /*font-weight: bold;*/
+    text-decoration: none;
+}
+.chobak-corner:hover, .chobak-corner:focus  {
+    color: #8C4A36;
+    /*background-color: #FDF8F2;*/
+    border-radius: 0.25rem;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #1A2A3A; /* Deep blue */
+    color: #FDF8F2; /* Light cream */
+    padding: 20px;
+    text-align: center;
+}
+.footer a {
+    color: #FDF8F2 !important; /* Override Bootstrap's default link color */
+    text-decoration: underline !important; /* Add underline for default state */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth hover transition */
+}
+.footer a:hover {
+    color: #fb9602 !important; /* Hover color */
+    text-decoration: none !important; /* Remove underline on hover */
+}
+
+.bible-reference {
+    margin-top: 20px;
+    padding: 10px 15px; /* Adjusted padding for better spacing with border */
+    border-top: 1px solid #ddd;
+    border-left: 4px solid #1A2A3A; /* Dark blue left border for highlighting */
+    font-family: "Georgia", serif;
+    font-size: 1rem;
+    color: #333;
+    border-radius: 5px; /* Optional: Match the style with a slight rounding */
+}
+.bible-reference p {
+    margin: 0;
+    line-height: 1.6;
+}
+.bible-reference sup {
+    font-size: 0.75em;
+    vertical-align: super;
+    color: #555;
+}
+.bible-version {
+    display: block;
+    margin-top: 5px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Post Section Styling */
+.post-section {
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+    background-color: #FDF8F2; /* Light cream background */
+    border-bottom: 2px solid #ece0da; /* Subtle border */
+}
+.post-section .post-section-header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #A4573D; /* Rust color */
+}
+.post-section .post-section-header img {
+    background-color: #ece0da;
+    max-width: 175px;
+    box-shadow: 4px 8px #575555;
+}
+.post-section .post-section-header .post-title {
+    font-size: 2rem; /* Adjust as needed */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.post-section .post-section-header .post-date {
+    font-size: 1.25rem;
+    color: #6c757d; /* Bootstrap's muted color */
+    margin-bottom: 0.5rem;
+}
+.post-section .post-section-header .post-author {
+    font-size: 1rem;
+    color: #6c757d; /* Consistent with muted text */
+    margin-top: -5px; /* Optional: fine-tune spacing */
+}
+
+#posts {
+    padding: 20px;
+    background-color: #FDF8F2; /* Light cream background to match the theme */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the section */
+}
+
+.post-preview {
+    background-color: #FFFFFF; /* Pure white for contrast */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08); /* Soft shadow for individual cards */
+}
+
+.post-preview h2 {
+    color: #A4573D; /* Rust color for title */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.post-preview .text-muted {
+    color: #4A4A4A; /* Dark grey for date */
+    font-size: 0.9rem;
+}
+
+.post-preview p {
+    color: #4A4A4A; /* Dark grey for text */
+    margin-bottom: 15px;
+}
+
+.post-preview a {
+    color: #A4573D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post-preview a:hover {
+    color: #8C4A36; /* Darker rust color on hover */
+    text-decoration: underline;
+}
+
+/* Button styling for "More Posts" link */
+#posts .btn-outline-dark {
+    color: #A4573D;
+    border-color: #A4573D;
+}
+
+#posts .btn-outline-dark:hover {
+    background-color: #A4573D;
+    color: #FDF8F2;
+}
+
+
+/* Content Section Styling */
+.content-section {
+    padding: 40px 20px;
+    background-color: #FDF8F2; /* Light cream background */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the section */
+    margin-bottom: 20px; /* Adds spacing from the footer or other sections */
+}
+
+.content-section .text-center {
+    margin-bottom: 20px;
+}
+
+.content-section img {
+    max-width: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08); /* Light shadow for image */
+}
+
+.content-section h1 {
+    color: #A4573D; /* Rust color for the title */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.content-section .lead {
+    color: #4A4A4A; /* Dark grey for tagline text */
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+.content-section p {
+    color: #4A4A4A; /* Dark grey text */
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.content-section a {
+    color: #A4573D; /* Rust color for links */
+    text-decoration: none;
+}
+
+.content-section a:hover {
+    color: #8C4A36; /* Darker rust on hover */
+    text-decoration: underline;
+}
+
+/* Poem Section */
+.poem {
+    padding: 15px 20px;
+    background-color: #FDF8F2; /* Light cream background for poem */
+    border-left: 4px solid #A4573D; /* Rust-colored left border to highlight */
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Styling for verse collapsible content */
+.poem .collapse p {
+    font-size: 0.95rem;
+    color: #4A4A4A;
+}
+
+/*
+.post-title {
+    color: #A4573D;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.post-subtitle {
+    font-style: italic;
+    color: #4A4A4A;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+.post-paragraph {
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+.video-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+blockquote.custom-quote {
+    background-color: #ece0da;
+    border-left: 4px solid #A4573D;
+    padding: 20px;
+    margin: 30px 0;
+    font-size: 1.1rem;
+    color: #4A4A4A;
+    border-radius: 5px;
+}
+
+blockquote.custom-quote footer {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.poem-section {
+    background-color: #f9f4ef;
+    padding: 20px;
+    border-left: 4px solid #A4573D;
+    margin: 30px 0;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+.poem-title {
+    color: #A4573D;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.signature {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4A4A4A;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.code-snippet {
+    margin: 30px 0;
+    overflow-x: auto;
+}
+*/
